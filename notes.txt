@@ -1,0 +1,215 @@
+- MongoDB is the ligth weigth DataBase
+- MongoDB supports the JSON
+- As a MongoDB Developer, we can perform CRUD Operations on JSON
+- MongoDB follows the "mongodb" protocol
+- By Default MongoDB running on port no.27017
+- MongoDB follows the client server architecture
+- MongoDB is the NoSQL DataBase.
+
+Installation of MongoDB
+-----------------------
+1) download the mongodb by visiting the following website
+
+website : https://www.mongodb.com/download-center/community
+file    : mongodb-win32-x86_64-2008plus-ssl-4.0.11-signed.msi
+
+
+2) create the following directory structure
+
+c:/data/db
+    - above directory structure for to maintain data backup.
+
+3) set the path environmental variable
+
+path = C:\Program Files\MongoDB\Server\4.0\bin
+
+MongoDB Queries
+---------------
+> mongod
+    - automatically server will start on port no.27017
+    - and it will follow the "mongodb" protocol
+
+> mongo
+    - it is used to connect to server.
+
+> use testdb;
+    - "testdb" DataBase created and switches also.
+
+> db.createCollection("products");
+    - "products" collection will be created.
+
+> db.products.insert({"p_id":111,
+                      "p_name":"p_one",
+                      "p_cost":10000}); 
+    - automatically record will be inserted.
+
+> db.products.find();
+    - we can fetch the data from products collection.
+
+> show dbs;
+    - it will show available databases.
+
+> db.dropDatabase();
+    - it will drop current DataBase.
+
+**************************************
+protocol    :   mongodb
+
+port        :   27017
+
+database    :   testdb
+
+collection  :   products
+
+host        :   localhost
+*************************************
+
+
+1) download the following node modules
+
+=> express
+=> mongodb@2.2.32
+=> body-parser
+=> cors
+
+        - express module used to develop the rest apis
+
+        - "mongodb@2.2.32" used to interact with the mongodb database
+
+        - "body-parser" module used to read the post parameters
+
+        - "cors" module used to enable the ports communication
+
+> yarn add express
+           mongodb@2.2.32
+           body-parser
+           cors --save
+
+2) develop rest apis by using NodeJS
+
+*********************************
+MongoDB_CRUD
+        fetch
+            fetch.js
+        insert
+            insert.js
+        update
+            update.js
+        delete
+            delete.js
+        server.js
+********************************* 
+
+    - "fetch.js" file used to fetch the data from products collection
+
+    - "insert.js" file used to insert the data in products 
+    collection
+
+    - "update.js" file used to update the data in products collection.
+
+    - "delete.js" file used to delete the data from products
+    collection.
+
+    - "server.js" file is the main server file.
+
+
+3) start the servers
+
+> nodemon server
+
+> mongod
+
+> mongo
+
+
+4) Test the following rest apis by using Postman
+
+    => http://localhost:8080/fetch   (GET)
+
+    => http://localhost:8080/insert  (POST)
+
+    => http://localhost:8080/update  (POST)
+
+    => http://localhost:8080/delete  (POST)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
